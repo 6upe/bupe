@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Under Maintenance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .message-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .message-input {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .send-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .whatsapp-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .message-input {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Portfolio Under Maintenance</h1>
+        <div class="message-container">
+            <img class="whatsapp-icon" src="whatsapp_icon.jpg" alt="WhatsApp">
+            <input id="message-input" class="message-input" type="text" placeholder="Type your message...">
+            <button id="send-button" class="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("send-button").addEventListener("click", function () {
+            var message = document.getElementById("message-input").value;
+            var phoneNumber = "+260962893773";
+            var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(url, "_blank");
+        });
+    </script>
+
+</html>
